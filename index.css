@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.HeaderBox {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: 10px 10px;
+  /* background-color: black; */
+}
+
+.logoImage {
+  width: 300px;
+}
+
+#MenuWallpaper {
+  position: relative;
+  background-image: url("./Wallpaper.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+#roundBoxForMenuBtnLook {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 4px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: auto 0px;
+}
+
+.verticalLines {
+  display: block;
+  width: 15px;
+  height: 4px;
+  background: white;
+  margin: 2px auto;
+}
+
+#MenuOnHover {
+  position: fixed;
+  top: 0px;
+  right: -30%;
+  width: 30%;
+  height: 100vh;
+  background-color: white;
+  transition: 2s ease all;
+}
+
+.menuShowCaser {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px 10px;
+  height: 100vh;
+  text-align: center;
+}
+
+.menuShowCaser span {
+  color: black;
+  font-size: 22px;
+  font-weight: 500;
+  border-bottom: 2px solid white;
+}
+
+.menuShowCaser span:hover {
+  border-bottom: 2px solid rgba(22, 112, 183);
+  color: rgba(22, 112, 183);
+}
+
+#roundBoxForMenuBtnLook:hover #MenuOnHover {
+  transition: 2s ease all;
+  right: 0% !important;
+}
+
+.onClickMenuInMobile {
+  transition: 2s ease all;
+  right: 0% !important;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 786px) {
+  #MenuWallpaper {
+    background-size: cover;
+    background-position-x: center;
+  }
+  .logoImage {
+    width: 200px;
+  }
+  #MenuOnHover {
+    right: -40%;
+    width: 40%;
+  }
+}
